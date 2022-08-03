@@ -15,7 +15,7 @@ function App() {
 
   const convertToGif = async () => {
     ffmpeg.FS('writeFile', 'test.mp4', await fetchFile(video));
-    await ffmpeg.run('-i', 'test.mp4', '-t', '2.5', '-ss', '2.0', 'gif', 'out.gif');
+    await ffmpeg.run('-i', 'test.mp4', '-t', '2.5', '-ss', '2.0', '-f', 'gif' ,'out.gif');
     const data = ffmpeg.FS('readFile', 'out.gif');
     // create
     const url = URL.createObjectURL(new Blob([data.buffer]), {type: 'image/gif'})
