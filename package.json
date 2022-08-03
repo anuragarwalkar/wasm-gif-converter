@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "snowpack dev",
-    "server": "yarn build && node server.js",
+    "server": "yarn build && node",
     "build": "snowpack build",
     "test": "web-test-runner \"src/**/*.test.jsx\"",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
